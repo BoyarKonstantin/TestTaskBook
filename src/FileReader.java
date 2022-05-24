@@ -7,12 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FileReader {
-
-    public static void main(String[] args) {
-        FileReader fileReader = new FileReader();
-        fileReader.reader();
-
-    }
+    
     public ArrayList<String> reader(){
         List<String> readerList = new ArrayList<>();
         File inputFile = new File("C:\\Users\\Konstantin\\IdeaProjects\\TestTaskForHundredDollars\\input.txt");
