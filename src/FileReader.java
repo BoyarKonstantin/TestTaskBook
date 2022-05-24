@@ -7,10 +7,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FileReader {
-    
-    public ArrayList<String> reader(){
+
+    public int size(String path){ return readerWithFile(path).size(); }
+    public ArrayList<String> readerWithFile(String path){
         List<String> readerList = new ArrayList<>();
-        File inputFile = new File("C:\\Users\\Konstantin\\IdeaProjects\\TestTaskForHundredDollars\\input.txt");
+        File inputFile = new File(path);
         java.io.FileReader fileReader;
         BufferedReader reader;
 
@@ -25,7 +26,6 @@ public class FileReader {
                     line = reader.readLine();
                     readerList.add(line);
                 }
-                System.out.println(readerList.get(0));
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             } catch (IOException e) {
